@@ -1,0 +1,1 @@
+CHROM	BIN_START	N_SNPS	TajimaD

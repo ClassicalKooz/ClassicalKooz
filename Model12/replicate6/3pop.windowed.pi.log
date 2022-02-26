@@ -1,0 +1,105 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model12/replicate6/model11_replicate6.vcf
+	--window-pi 100
+	--window-pi-step 100
+	--stdout
+	--indv tsk_0
+	--indv tsk_1
+	--indv tsk_10
+	--indv tsk_11
+	--indv tsk_12
+	--indv tsk_13
+	--indv tsk_14
+	--indv tsk_15
+	--indv tsk_16
+	--indv tsk_17
+	--indv tsk_18
+	--indv tsk_19
+	--indv tsk_2
+	--indv tsk_3
+	--indv tsk_4
+	--indv tsk_5
+	--indv tsk_6
+	--indv tsk_7
+	--indv tsk_8
+	--indv tsk_9
+
+Keeping individuals in 'keep' list
+After filtering, kept 20 out of 30 Individuals
+Outputting Windowed Nucleotide Diversity Statistics...
+After filtering, kept 100 out of a possible 100 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model12/replicate6/model11_replicate6.vcf
+	--window-pi 100
+	--window-pi-step 100
+	--stdout
+	--indv tsk_0
+	--indv tsk_1
+	--indv tsk_2
+	--indv tsk_20
+	--indv tsk_21
+	--indv tsk_22
+	--indv tsk_23
+	--indv tsk_24
+	--indv tsk_25
+	--indv tsk_26
+	--indv tsk_27
+	--indv tsk_28
+	--indv tsk_29
+	--indv tsk_3
+	--indv tsk_4
+	--indv tsk_5
+	--indv tsk_6
+	--indv tsk_7
+	--indv tsk_8
+	--indv tsk_9
+
+Keeping individuals in 'keep' list
+After filtering, kept 20 out of 30 Individuals
+Outputting Windowed Nucleotide Diversity Statistics...
+After filtering, kept 100 out of a possible 100 Sites
+Run Time = 0.00 seconds
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model12/replicate6/model11_replicate6.vcf
+	--window-pi 100
+	--window-pi-step 100
+	--stdout
+	--indv tsk_10
+	--indv tsk_11
+	--indv tsk_12
+	--indv tsk_13
+	--indv tsk_14
+	--indv tsk_15
+	--indv tsk_16
+	--indv tsk_17
+	--indv tsk_18
+	--indv tsk_19
+	--indv tsk_20
+	--indv tsk_21
+	--indv tsk_22
+	--indv tsk_23
+	--indv tsk_24
+	--indv tsk_25
+	--indv tsk_26
+	--indv tsk_27
+	--indv tsk_28
+	--indv tsk_29
+
+Keeping individuals in 'keep' list
+After filtering, kept 20 out of 30 Individuals
+Outputting Windowed Nucleotide Diversity Statistics...
+After filtering, kept 100 out of a possible 100 Sites
+Run Time = 0.00 seconds

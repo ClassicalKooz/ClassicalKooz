@@ -1,0 +1,16 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model9/replicate4/model9_replicate4.vcf
+	--keep individual.keep
+	--het
+	--stdout
+
+Keeping individuals in 'keep' list
+After filtering, kept 30 out of 30 Individuals
+Outputting Individual Heterozygosity
+	Individual Heterozygosity: Only using biallelic SNPs.
+After filtering, kept 100 out of a possible 100 Sites
+Run Time = 0.00 seconds
