@@ -67,7 +67,7 @@ Keeping individuals in 'keep' list
 After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Nucleotide Diversity Statistics...
 After filtering, kept 100 out of a possible 100 Sites
-Run Time = 0.00 seconds
+Run Time = 1.00 seconds
 
 VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009

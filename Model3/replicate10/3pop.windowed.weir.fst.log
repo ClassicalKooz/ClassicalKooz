@@ -15,8 +15,8 @@ Parameters as interpreted:
 Keeping individuals in 'keep' list
 After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Weir and Cockerham Fst estimates.
-Weir and Cockerham mean Fst estimate: 0.0059196
-Weir and Cockerham weighted Fst estimate: 0.006944
+Weir and Cockerham mean Fst estimate: 0.0032904
+Weir and Cockerham weighted Fst estimate: 0.0076361
 After filtering, kept 100 out of a possible 100 Sites
 Run Time = 0.00 seconds
 
@@ -36,8 +36,8 @@ Parameters as interpreted:
 Keeping individuals in 'keep' list
 After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Weir and Cockerham Fst estimates.
-Weir and Cockerham mean Fst estimate: -0.00041224
-Weir and Cockerham weighted Fst estimate: 0.00015318
+Weir and Cockerham mean Fst estimate: 0.010923
+Weir and Cockerham weighted Fst estimate: 0.014173
 After filtering, kept 100 out of a possible 100 Sites
 Run Time = 0.00 seconds
 
@@ -57,7 +57,7 @@ Parameters as interpreted:
 Keeping individuals in 'keep' list
 After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Weir and Cockerham Fst estimates.
-Weir and Cockerham mean Fst estimate: 0.010548
-Weir and Cockerham weighted Fst estimate: 0.011547
+Weir and Cockerham mean Fst estimate: -0.00022675
+Weir and Cockerham weighted Fst estimate: 0.0028776
 After filtering, kept 100 out of a possible 100 Sites
 Run Time = 0.00 seconds

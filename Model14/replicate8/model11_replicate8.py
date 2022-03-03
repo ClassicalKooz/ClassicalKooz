@@ -33,7 +33,7 @@ demography.sort_events()
 ts = msprime.sim_ancestry(sequence_length=100, samples={"pop1": 10, "pop2": 10, "Ghost":10}, demography=demography, random_seed=7233)
 
 #Simulate mutations along the tree sequence simulated by msprime above
-mts = msprime.sim_mutations(ts, rate=0.01, random_seed=7233)
+mts = msprime.sim_mutations(ts, rate=0.01, random_seed=7233, model="binary")
 
 #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
 with open("model14_replicate8.vcf","w") as vcf_file:

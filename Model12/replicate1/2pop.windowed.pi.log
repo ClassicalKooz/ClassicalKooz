@@ -3,7 +3,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model12/replicate1/model12_replicate1.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model12/replicate1/model11_replicate1.vcf
 	--window-pi 100
 	--window-pi-step 100
 	--stdout
@@ -29,7 +29,7 @@ Parameters as interpreted:
 	--indv tsk_9
 
 Keeping individuals in 'keep' list
-After filtering, kept 3 out of 3 Individuals
+After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Nucleotide Diversity Statistics...
 After filtering, kept 100 out of a possible 100 Sites
 Run Time = 0.00 seconds

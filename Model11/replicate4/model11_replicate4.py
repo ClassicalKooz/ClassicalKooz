@@ -1,5 +1,5 @@
 import msprime
-import stdpopsim
+
 
 #Specifications of the demographic model
 demography = msprime.Demography()
@@ -33,7 +33,7 @@ demography.sort_events()
 ts = msprime.sim_ancestry(sequence_length=100, samples={"pop1": 10, "pop2": 10, "Ghost":10}, demography=demography, random_seed=5084)
 
 #Simulate mutations along the tree sequence simulated by msprime above
-mts = msprime.sim_mutations(ts, rate=0.01, random_seed=5084)
+mts = msprime.sim_mutations(ts,model="binary", rate=0.01, random_seed=5084)
 
 #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
 with open("model11_replicate4.vcf","w") as vcf_file:
