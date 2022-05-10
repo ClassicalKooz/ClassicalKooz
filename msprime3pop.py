@@ -1,22 +1,24 @@
+from pickle import TRUE
 import msprime
 import stdpopsim
+import random
 
 #Specifications of the demographic model
 demography = msprime.Demography()
-demography.add_population(name="NA1", initial_size=5_000)
-demography.add_population(name="NA2", initial_size=5_000)
+demography.add_population(name="NA1", initial_size=2_500)
+demography.add_population(name="NA2", initial_size=2_500)
 # Ghost is ghost
-demography.add_population(name="Ghost", initial_size=5_000)
-demography.add_population(name="pop1", initial_size=5_000)
-demography.add_population(name="pop2", initial_size=5_000)
-demography.add_population_split(time=18500, derived=["NA2", "Ghost"], ancestral="NA1")
-demography.add_population_split(time=1850, derived=["pop1", "pop2"], ancestral="NA2")
-demography.set_migration_rate(source="pop1", dest="pop2", rate=0.1)
-demography.set_migration_rate(source="pop2", dest="pop1", rate=0.1)
-demography.set_migration_rate(source="pop1", dest="Ghost", rate=0)
-demography.set_migration_rate(source="Ghost", dest="pop1", rate=0)
-demography.set_migration_rate(source="pop2", dest="Ghost", rate=0)
-demography.set_migration_rate(source="Ghost", dest="pop2", rate=0)
+demography.add_population(name="Ghost", initial_size=2_500)
+demography.add_population(name="pop1", initial_size=2_500)
+demography.add_population(name="pop2", initial_size=2_500)
+demography.add_population_split(time=2000000, derived=["NA2", "Ghost"], ancestral="NA1")
+demography.add_population_split(time=500000, derived=["pop1", "pop2"], ancestral="NA2")
+demography.set_migration_rate(source="pop1", dest="pop2", rate=0.0001)
+demography.set_migration_rate(source="pop2", dest="pop1", rate=0.0001)
+demography.set_migration_rate(source="pop1", dest="Ghost", rate=0.001)
+demography.set_migration_rate(source="Ghost", dest="pop1", rate=0.001)
+demography.set_migration_rate(source="pop2", dest="Ghost", rate=0.001)
+demography.set_migration_rate(source="Ghost", dest="pop2", rate=0.001)
 demography.sort_events()
 
 #TODO for MK: We need to write several loops. 1) We have to loop over migration rates (0 - no gene flow, 0.1 - low gene flow, 0.5 - high gene flow)
@@ -26,27 +28,28 @@ demography.sort_events()
 #do at least 10 replicates/model, each replicate with a different random number seed
 
 #write a for loop over the next three commands (1) simulate tree, (2) simulate mutations, (3) write a vcf
-
+for i in range(0,10):
+    x=random.randint(1,9999)
 #Call msprime to simulate tree sequence under the demographic model
-ts = msprime.sim_ancestry(sequence_length=100, samples={"pop1": 1, "pop2": 1, "Ghost":1}, demography=demography, random_seed=5258)
+    ts = msprime.sim_ancestry(sequence_length=100, samples={"pop1": 10, "pop2": 10, "Ghost":10}, demography=demography, random_seed=x)
 
 #Simulate mutations along the tree sequence simulated by msprime above
-mts = msprime.sim_mutations(ts, rate=0.01, random_seed=5678)
+    mts = msprime.sim_mutations(ts, rate=0.000001, random_seed=x, model='binary')
 
 #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
-with open("model5_replicate1.vcf","w") as vcf_file:
-    mts.write_vcf(vcf_file,contig_id="0")
+    with open("model5_replicate%r.vcf" %i, "w") as vcf_file:
+        mts.write_vcf(vcf_file,contig_id="0")
 
 #Prints the demography 
-print(demography)
+#print(demography)
 
 #Graphical output of the simulated demographic model
-import demesdraw
-import matplotlib.pyplot as plt 
-graph = msprime.Demography.to_demes(demography)
-fig, ax = plt.subplots()  # use plt.rcParams["figure.figsize"]
-demesdraw.tubes(graph, ax=ax, seed=1)
-plt.show() 
+#import demesdraw
+#import matplotlib.pyplot as plt 
+#graph = msprime.Demography.to_demes(demography)
+#fig, ax = plt.subplots()  # use plt.rcParams["figure.figsize"]
+#demesdraw.tubes(graph, ax=ax, seed=1)
+#plt.show() 
 
 
 

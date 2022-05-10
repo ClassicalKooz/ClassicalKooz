@@ -1,0 +1,24 @@
+2022-05-10 16:16:40,486 - logArgs - INFO: Argument vcf: Melissa_Simulated_Data/Melissa_Model5/model5_replicate0.vcf
+2022-05-10 16:16:40,486 - logArgs - INFO: Argument model_file: models.model
+2022-05-10 16:16:40,486 - logArgs - INFO: Argument model: 3Pop
+2022-05-10 16:16:40,486 - logArgs - INFO: Argument out_prefix: 3Pop
+2022-05-10 16:16:40,486 - logArgs - INFO: Argument out_dir: Statistic_Files
+2022-05-10 16:16:40,487 - logArgs - INFO: Argument overwrite: False
+2022-05-10 16:16:40,487 - logArgs - INFO: Argument log_stdout: False
+2022-05-10 16:16:40,487 - logArgs - INFO: Argument calc_statistic: windowed-weir-fst
+2022-05-10 16:16:40,487 - logArgs - INFO: Argument statistic_window_size: 100
+2022-05-10 16:16:40,487 - logArgs - INFO: Argument statistic_window_step: 100
+2022-05-10 16:16:40,488 - read_model_file - INFO: Finished reading model file (models.model)
+2022-05-10 16:16:40,488 - run - INFO: 3Pop assigned as model
+2022-05-10 16:16:40,489 - create_pop_files - INFO: Population files created for 3Pop
+2022-05-10 16:16:40,489 - run - INFO: vcftools parameters assigned
+2022-05-10 16:16:40,490 - check_for_vcftools_output - INFO: Output file assigned
+2022-05-10 16:16:40,490 - check_for_vcftools_output - INFO: Log file assigned
+2022-05-10 16:16:40,490 - run - INFO: Input file assigned
+2022-05-10 16:16:40,491 - confirm_executable - INFO: Calling executable: /usr/local/bin/vcftools
+2022-05-10 16:16:40,496 - pipe_vcftools_to_file - INFO: vcftools call complete
+2022-05-10 16:16:40,497 - confirm_executable - INFO: Calling executable: /usr/local/bin/vcftools
+2022-05-10 16:16:40,502 - pipe_vcftools_to_file - INFO: vcftools call complete
+2022-05-10 16:16:40,503 - confirm_executable - INFO: Calling executable: /usr/local/bin/vcftools
+2022-05-10 16:16:40,509 - pipe_vcftools_to_file - INFO: vcftools call complete
+2022-05-10 16:16:40,510 - delete_pop_files - INFO: Population files deleted for 3Pop
