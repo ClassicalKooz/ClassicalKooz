@@ -2,6 +2,7 @@ from pickle import TRUE
 import msprime
 import stdpopsim
 import random
+import sys
 
 #Specifications of the demographic model
 demography = msprime.Demography()
@@ -28,17 +29,24 @@ demography.sort_events()
 #do at least 10 replicates/model, each replicate with a different random number seed
 
 #write a for loop over the next three commands (1) simulate tree, (2) simulate mutations, (3) write a vcf
-for i in range(0,10):
-    x=random.randint(1,9999)
-#Call msprime to simulate tree sequence under the demographic model
-    ts = msprime.sim_ancestry(sequence_length=100, samples={"pop1": 10, "pop2": 10, "Ghost":10}, demography=demography, random_seed=x)
+for k in range(0,1): # looping over replicates
+    for j in range(0,10): # looping over number of independent loci
+        x=random.randint(1,9999)
+        #Call msprime to simulate tree sequence under the demographic model
+        ts = msprime.sim_ancestry(sequence_length=1000, samples={"pop1": 10, "pop2": 10, "Ghost":10}, demography=demography, random_seed=x)
+        #Simulate mutations along the tree sequence simulated by msprime above
+        mts = msprime.sim_mutations(ts, rate=0.000001, random_seed=x)#, model='binary')
 
-#Simulate mutations along the tree sequence simulated by msprime above
-    mts = msprime.sim_mutations(ts, rate=0.000001, random_seed=x, model='binary')
+        #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
+        with open("model6_replicate%r_%r.vcf" %(k,j), "w") as vcf_file:
+            mts.write_vcf(vcf_file,contig_id=str(j))
+        #mts.write_fasta("model6_replicate%r_%r.fasta" %(i,j))
+            imfile = open("model6_replicate%r_%r.u" %(k,j),"w",buffering=1)
+            for i,h in enumerate(mts.haplotypes()):
+                print(f"Sample{i} {h}",file=imfile)
 
-#Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
-    with open("model6_replicate%r.vcf" %i, "w") as vcf_file:
-        mts.write_vcf(vcf_file,contig_id="0")
+
+
 
 #Prints the demography 
 #print(demography)

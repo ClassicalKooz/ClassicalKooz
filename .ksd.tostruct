@@ -1,6 +1,6 @@
 #!/bin/bash
 
-HOMEDIR=/home/kdorman/hon290
+HOMEDIR=~/
 #BASEDIR=GhostPopulationSimulation
 BASEDIR=GhostPopulationSimulation/Melissa_Simulated_Data/
 TEST_ONLY=0
