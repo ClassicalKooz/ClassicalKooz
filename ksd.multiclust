@@ -1,0 +1,46 @@
+#!/bin/bash
+
+BASEDIR=ksd
+BIN=multiclust
+NCPU=6
+TEST_ONLY=0
+
+function wait_on {
+	NUM=`pgrep -c $BIN`
+	while [ $NUM -ge $NCPU ]
+	do
+		echo "$NUM $BIN running..."
+		sleep 1
+		NUM=`pgrep -c $BIN`
+	done
+}
+
+
+for dir_no in `seq 1 5`;
+do
+	dir="Melissa_Model${dir_no}"
+        for rep in `seq 0 9`;
+        do
+		file="model${dir_no}_replicate${rep}.stru"
+		echo $BASEDIR/$dir/$file
+		pushd $BASEDIR/$dir
+		for k in 1 2 3 4
+		do
+			# <datafile>.admix.K=2.out.txt
+			if [ ! -f ${file}.admix.K=${k}.out.txt ]
+			then
+				n=$((k*100))
+				if [ $TEST_ONLY != 1 ]
+				then
+					wait_on
+					echo "../../multiclust/multiclust -f ${file} -n ${n} -k ${k} -a -r $RANDOM -s 23"
+					../../multiclust/multiclust -f ${file} -n ${n} -k ${k} -a -r $RANDOM -s 23 &
+					sleep 0.1
+				else
+					echo "../../multiclust/multiclust -f ${file} -n ${n} -k ${k} -a -r $RANDOM -s 23"
+				fi
+			fi
+		done
+		popd
+	done
+done   
