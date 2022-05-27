@@ -44,6 +44,11 @@ for k in range(0,1): # looping over replicates
             imfile = open("model6_replicate%r_%r.u" %(k,j),"w",buffering=1)
             for i,h in enumerate(mts.haplotypes()):
                 print(f"Sample{i} {h}",file=imfile)
+        #calculate all stats
+        print(mts.diversity(mode="site"))
+        print(mts.divergence(sample_sets=[mts.samples(population=0),mts.samples(population=1),mts.samples(population=2)]))
+        #print(mts.Tajimas_D(sample_sets=[0,1,2],mode="site"))
+        #print(mts.Fst(sample_sets=[0,1,2],mode="site"))
 
 
 
