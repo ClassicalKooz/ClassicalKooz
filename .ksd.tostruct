@@ -1,0 +1,34 @@
+#!/bin/bash
+
+HOMEDIR=/home/kdorman/hon290
+#BASEDIR=GhostPopulationSimulation
+BASEDIR=GhostPopulationSimulation/Melissa_Simulated_Data/
+TEST_ONLY=0
+
+for dir_no in `seq 1 5`;
+do
+	dir="Melissa_Model${dir_no}"
+	pushd $BASEDIR/$dir
+
+	#for rep_no in `seq 1 10`;
+	for rep_no in `seq 0 9`;
+	do
+		#dir="Model${dir_no}/replicate${rep_no}"
+		file="model${dir_no}_replicate${rep_no}"
+		echo $BASEDIR/$dir/$file
+		if [ $TEST_ONLY != 1 ];
+		then
+			perl -pe 's/tsk_\K\d+/$&+1/ge' ${file}.vcf > ${file}.vcf.2
+			plink -vcf ${file}.vcf.2 --recode structure --out ${file}
+			mkdir --parents $HOMEDIR/.ksd/$dir
+			mv ${file}.recode.strct_in $HOMEDIR/.ksd/$dir/${file}.stru
+			rm ${file}.vcf.2
+		else
+			echo "perl -pe 's/tsk_\K\d+/$&+1/ge' ${file}.vcf > ${file}.vcf.2"
+			echo "plink -vcf ${file}.vcf.2 --recode structure --out ${file}"
+			echo "mv ${file}.recode.strct_in .${file}.stru"
+			echo "rm ${file}.vcf.2"
+		fi
+	done
+	popd
+done

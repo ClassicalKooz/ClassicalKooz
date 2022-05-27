@@ -13,12 +13,12 @@ demography.add_population(name="pop1", initial_size=2_500)
 demography.add_population(name="pop2", initial_size=2_500)
 demography.add_population_split(time=2000000, derived=["NA2", "Ghost"], ancestral="NA1")
 demography.add_population_split(time=500000, derived=["pop1", "pop2"], ancestral="NA2")
-demography.set_migration_rate(source="pop1", dest="pop2", rate=0.0001)
-demography.set_migration_rate(source="pop2", dest="pop1", rate=0.0001)
-demography.set_migration_rate(source="pop1", dest="Ghost", rate=0.001)
-demography.set_migration_rate(source="Ghost", dest="pop1", rate=0.001)
-demography.set_migration_rate(source="pop2", dest="Ghost", rate=0.001)
-demography.set_migration_rate(source="Ghost", dest="pop2", rate=0.001)
+demography.set_migration_rate(source="pop1", dest="pop2", rate=0.000)
+demography.set_migration_rate(source="pop2", dest="pop1", rate=0.000)
+demography.set_migration_rate(source="pop1", dest="Ghost", rate=0.00)
+demography.set_migration_rate(source="Ghost", dest="pop1", rate=0.00)
+demography.set_migration_rate(source="pop2", dest="Ghost", rate=0.00)
+demography.set_migration_rate(source="Ghost", dest="pop2", rate=0.00)
 demography.sort_events()
 
 #TODO for MK: We need to write several loops. 1) We have to loop over migration rates (0 - no gene flow, 0.1 - low gene flow, 0.5 - high gene flow)
@@ -37,7 +37,7 @@ for i in range(0,10):
     mts = msprime.sim_mutations(ts, rate=0.000001, random_seed=x, model='binary')
 
 #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
-    with open("model5_replicate%r.vcf" %i, "w") as vcf_file:
+    with open("model6_replicate%r.vcf" %i, "w") as vcf_file:
         mts.write_vcf(vcf_file,contig_id="0")
 
 #Prints the demography 
