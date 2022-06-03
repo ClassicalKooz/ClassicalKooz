@@ -1,0 +1,26 @@
+PLINK v1.90b6.26 64-bit (2 Apr 2022)
+Options in effect:
+  --out replicate4.str
+  --recode structure
+  --vcf replicate4.vcf
+
+Hostname: LAPTOP-MOEBECHI
+Working directory: /home/michael/GhostPopulationSimulation/Melissa_Simulated_Data/Melissa_Model2
+Start time: Fri Jun  3 15:24:42 2022
+
+Random number seed: 1654295082
+12310 MB RAM detected; reserving 6155 MB for main workspace.
+--vcf: replicate4.str-temporary.bed + replicate4.str-temporary.bim +
+replicate4.str-temporary.fam written.
+2551 variants loaded from .bim file.
+30 people (0 males, 0 females, 30 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to replicate4.str.nosex .
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 30 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.995048.
+2551 variants and 30 people pass filters and QC.
+Note: No phenotypes present.
+--recode structure to replicate4.str.recode.strct_in ... done.
+
+End time: Fri Jun  3 15:24:42 2022
