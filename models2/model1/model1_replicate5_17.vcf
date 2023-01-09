@@ -1,0 +1,10 @@
+##fileformat=VCFv4.2
+##source=tskit 0.4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##contig=<ID=17,length=1000>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	tsk_0	tsk_1	tsk_2	tsk_3	tsk_4	tsk_5	tsk_6	tsk_7	tsk_8	tsk_9	tsk_10	tsk_11	tsk_12	tsk_13	tsk_14	tsk_15	tsk_16	tsk_17	tsk_18	tsk_19	tsk_20	tsk_21	tsk_22	tsk_23	tsk_24	tsk_25	tsk_26	tsk_27	tsk_28	tsk_29
+17	475	.	G	T	.	PASS	.	GT	0|1	0|0	1|0	1|1	0|0	0|1	0|0	0|0	0|1	1|0	0|0	1|0	0|0	0|1	1|0	0|0	1|0	0|0	0|1	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0
+17	506	.	G	C	.	PASS	.	GT	0|1	0|0	1|0	1|0	0|0	0|0	0|0	0|0	0|1	0|0	0|0	0|0	0|0	0|1	0|0	0|0	0|0	0|0	0|1	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0
+17	713	.	A	C	.	PASS	.	GT	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|1	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|1	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0
+17	734	.	C	A	.	PASS	.	GT	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|1	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0	0|0

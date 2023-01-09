@@ -16,21 +16,21 @@ import pgpipe.vcf_filter as vcf_filter
 
 print ("Imports complete")
 
-rootdir = '/GhostPopulationSimulation/Melissa_Simulated_Data'
-
-for subdir, dirs, files in os.walk(rootdir):
-    for file in files:
-        if 'vcf' in file:
-            print(os.path.join(subdir, file))
-            #if os.path.exists("/home/faculty/asethuraman/Documents/MichaelK/Models/Statistic_Files"):
-                #os.rmdir("/home/faculty/asethuraman/Documents/MichaelK/Models/Statistic_Files") 
-            #vcf_calc.run(vcf = os.path.join(subdir, file),calc_statistic="TajimaD",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt",model="2Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"2pop"))
+path="models2/model1"
+dir_list = os.listdir(path)
+#print(dir_list)
+for root, dirs, files in os.walk(path, topdown=False):
+   for name in files:
+        if 'vcf' in name:
+            print(os.path.join(root, name))
+          
+        if os.path.exists("model2/model1"):
+                #os.rmdir("Melissa_Simulated_Data/Statistic_Files") 
+            #vcf_calc.run(vcf = os.path.join(root, name),calc_statistic="TajimaD",model_file="Models",model="2Pop",statistic_window_size=100,out_prefix=os.path.join(root,"2pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="TajimaD",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt", model="3Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"3pop"))
             #vcf_calc.run(vcf = os.path.join(subdir, file),calc_statistic="het-fit",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt",model="2Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"2pop"))
             #vcf_calc.run(vcf = os.path.join(subdir, file),calc_statistic="het-fit",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt",model="3Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"3pop"))
-            vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="windowed-weir-fst",statistic_window_size=100,
-                statistic_window_step=100,model_file="/home/michael/GhostPopulationSimulation/models.model",model="2Pop",
-                out_prefix=os.path.join(subdir,"2pop"))
+            vcf_calc.run(vcf=os.path.join(root, name),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/michael/GhostPopulationSimulation/models.model",model="2Pop",out_prefix=os.path.join(name,"2pop.fst"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="3Pop",out_prefix=os.path.join(subdir,"3pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="window-pi",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="2Pop",out_prefix=os.path.join(subdir,"2pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="window-pi",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="3Pop",out_prefix=os.path.join(subdir,"3pop"))

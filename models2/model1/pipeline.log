@@ -1,0 +1,13 @@
+2022-11-30 19:16:39,553 - logArgs - INFO: Argument vcf: model1_replicate0_0.vcf
+2022-11-30 19:16:39,553 - logArgs - INFO: Argument out: model1_0_0
+2022-11-30 19:16:39,553 - logArgs - INFO: Argument out_prefix: out
+2022-11-30 19:16:39,553 - logArgs - INFO: Argument out_dir: Statistic_Files
+2022-11-30 19:16:39,553 - logArgs - INFO: Argument overwrite: False
+2022-11-30 19:16:39,553 - logArgs - INFO: Argument log_stdout: False
+2022-11-30 19:16:39,553 - logArgs - INFO: Argument calc_statistic: site-pi
+2022-11-30 19:16:39,553 - run - INFO: vcftools parameters assigned
+2022-11-30 19:16:39,553 - check_for_vcftools_output - INFO: Output file assigned
+2022-11-30 19:16:39,553 - check_for_vcftools_output - INFO: Log file assigned
+2022-11-30 19:16:39,553 - run - INFO: Input file assigned
+2022-11-30 19:16:39,553 - confirm_executable - INFO: Calling executable: /usr/local/bin/vcftools
+2022-11-30 19:16:39,557 - pipe_vcftools_to_file - INFO: vcftools call complete
