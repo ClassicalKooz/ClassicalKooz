@@ -1,18 +1,12 @@
-
 import sys
 import os
 import subprocess
 
-from pgpipe import vcf_split_pysam, vcf_to_ima, vcf_filter, vcf_calc, vcf_phase, stat_sampler, vcf_split
-#took out four_gamete and sampler
+from pgpipe import four_gamete, vcf_split_pysam, vcf_to_ima, vcf_filter, vcf_calc, vcf_sampler, vcf_phase, stat_sampler, vcf_split
 from pgpipe.logging_module import initLogger
 from pgpipe.informative_loci_filter import filter_bed_regions
-#from pgpipe.subtract_bed import filter_stat
-#causes error "no module named pgpipe.substract_bed
+from pgpipe.subtract_bed import filter_stat
 import pysam
-import pgpipe.vcf_filter as vcf_filter
-#import vcf_to_sfs as vs
-#import vcf_format_conversions as vfc
 
 print ("Imports complete")
 
@@ -21,16 +15,16 @@ dir_list = os.listdir(path)
 #print(dir_list)
 for root, dirs, files in os.walk(path, topdown=False):
    for name in files:
-        if 'vcf' in name:
-            print(os.path.join(root, name))
+        #if 'vcf' in name:
+            #print(os.path.join(root, name))
           
-        if os.path.exists("model2/model1"):
+        #if os.path.exists("model2/model1"):
                 #os.rmdir("Melissa_Simulated_Data/Statistic_Files") 
             #vcf_calc.run(vcf = os.path.join(root, name),calc_statistic="TajimaD",model_file="Models",model="2Pop",statistic_window_size=100,out_prefix=os.path.join(root,"2pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="TajimaD",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt", model="3Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"3pop"))
             #vcf_calc.run(vcf = os.path.join(subdir, file),calc_statistic="het-fit",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt",model="2Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"2pop"))
             #vcf_calc.run(vcf = os.path.join(subdir, file),calc_statistic="het-fit",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt",model="3Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"3pop"))
-            vcf_calc.run(vcf=os.path.join(root, name),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/michael/GhostPopulationSimulation/models.model",model="2Pop",out_prefix=os.path.join(name,"2pop.fst"))
+        vcf_calc.run(vcf=os.path.join(root, name),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/michael/GhostPopulationSimulation/models.model",model="2Pop",out_prefix=os.path.join(name,"2pop.fst"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="3Pop",out_prefix=os.path.join(subdir,"3pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="window-pi",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="2Pop",out_prefix=os.path.join(subdir,"2pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="window-pi",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="3Pop",out_prefix=os.path.join(subdir,"3pop"))
