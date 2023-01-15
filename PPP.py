@@ -24,7 +24,11 @@ for root, dirs, files in os.walk(path, topdown=False):
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="TajimaD",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt", model="3Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"3pop"))
             #vcf_calc.run(vcf = os.path.join(subdir, file),calc_statistic="het-fit",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt",model="2Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"2pop"))
             #vcf_calc.run(vcf = os.path.join(subdir, file),calc_statistic="het-fit",model_file="/home/faculty/asethuraman/Documents/MichaelK/models.txt",model="3Pop",statistic_window_size=100,out_prefix=os.path.join(subdir,"3pop"))
+<<<<<<< HEAD
         vcf_calc.run(vcf=os.path.join(root, name),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/michael/GhostPopulationSimulation/models.model",model="2Pop",out_prefix=os.path.join(name,"2pop.fst"))
+=======
+            #vcf_calc.run(vcf=os.path.join(root, name),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/michael/GhostPopulationSimulation/models.model",model="2Pop",out_prefix=os.path.join(name,"2pop.fst"))
+>>>>>>> 227be4475bc73163c7778c0cc36b007033c19add
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="windowed-weir-fst",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="3Pop",out_prefix=os.path.join(subdir,"3pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="window-pi",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="2Pop",out_prefix=os.path.join(subdir,"2pop"))
             #vcf_calc.run(vcf=os.path.join(subdir, file),calc_statistic="window-pi",statistic_window_size=100,statistic_window_step=100,model_file="/home/faculty/asethuraman/Documents/MichaelK/models.model",model="3Pop",out_prefix=os.path.join(subdir,"3pop"))
