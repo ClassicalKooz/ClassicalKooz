@@ -36,7 +36,7 @@ ts = msprime.sim_ancestry(sequence_length=100, samples={"pop1": 10, "pop2": 10, 
 mts = msprime.sim_mutations(ts, rate=0.01, random_seed=7657,model="binary")
 
 #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
-with open("model11_replicate1.vcf","w") as vcf_file:
+with open("model12_replicate1.vcf","w") as vcf_file:
     mts.write_vcf(vcf_file,contig_id="0")
 
 #Prints the demography 

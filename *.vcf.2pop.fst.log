@@ -1,0 +1,15 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf *.vcf
+	--fst-window-size 100
+	--fst-window-step 100
+	--weir-fst-pop pop1
+	--weir-fst-pop pop2
+	--keep pop1
+	--keep pop2
+	--out *.vcf.2pop.fst
+
+Error: Can't determine file type of *.vcf

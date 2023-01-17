@@ -1,0 +1,17 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf model12_replicate2.vcf
+	--keep pop1
+	--keep pop2
+	--out model12_replicate2.vcf.2pop.pi
+	--window-pi 100
+	--window-pi-step 100
+
+Keeping individuals in 'keep' list
+After filtering, kept 20 out of 30 Individuals
+Outputting Windowed Nucleotide Diversity Statistics...
+After filtering, kept 100 out of a possible 100 Sites
+Run Time = 0.00 seconds
