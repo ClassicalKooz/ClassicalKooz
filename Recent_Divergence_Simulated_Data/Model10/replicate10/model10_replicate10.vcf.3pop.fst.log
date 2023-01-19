@@ -1,0 +1,23 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf model10_replicate10.vcf
+	--fst-window-size 100
+	--fst-window-step 100
+	--weir-fst-pop pop1
+	--weir-fst-pop pop2
+	--weir-fst-pop ghost
+	--keep pop1
+	--keep pop2
+	--keep ghost
+	--out model10_replicate10.vcf.3pop.fst
+
+Keeping individuals in 'keep' list
+After filtering, kept 30 out of 30 Individuals
+Outputting Windowed Weir and Cockerham Fst estimates.
+Weir and Cockerham mean Fst estimate: -0.0014362
+Weir and Cockerham weighted Fst estimate: -0.00070677
+After filtering, kept 100 out of a possible 100 Sites
+Run Time = 0.00 seconds

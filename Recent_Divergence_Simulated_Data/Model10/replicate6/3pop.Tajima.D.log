@@ -1,0 +1,15 @@
+
+VCFtools - 0.1.17
+(C) Adam Auton and Anthony Marcketta 2009
+
+Parameters as interpreted:
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model10/replicate6/model10_replicate6.vcf
+	--keep individual.keep
+	--stdout
+	--TajimaD 100
+
+Keeping individuals in 'keep' list
+After filtering, kept 30 out of 30 Individuals
+Outputting Tajima's D Statistic...
+After filtering, kept 100 out of a possible 100 Sites
+Run Time = 0.00 seconds
