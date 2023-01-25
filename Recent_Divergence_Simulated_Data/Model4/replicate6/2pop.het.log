@@ -3,7 +3,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model4/replicate6/model4_replicate6.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model10/replicate6/model10_replicate6.vcf
 	--keep individual.keep
 	--het
 	--stdout
