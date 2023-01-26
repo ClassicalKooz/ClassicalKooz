@@ -3,7 +3,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model13/replicate7/model13_replicate7.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model7/replicate7/model7_replicate7.vcf
 	--fst-window-size 100
 	--fst-window-step 100
 	--weir-fst-pop pop1.txt
@@ -15,8 +15,8 @@ Parameters as interpreted:
 Keeping individuals in 'keep' list
 After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Weir and Cockerham Fst estimates.
-Weir and Cockerham mean Fst estimate: 0.0040532
-Weir and Cockerham weighted Fst estimate: 0.007604
+Weir and Cockerham mean Fst estimate: -0.0082586
+Weir and Cockerham weighted Fst estimate: -0.0067397
 After filtering, kept 100 out of a possible 100 Sites
 Run Time = 0.00 seconds
 
@@ -24,7 +24,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model13/replicate7/model13_replicate7.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model7/replicate7/model7_replicate7.vcf
 	--fst-window-size 100
 	--fst-window-step 100
 	--weir-fst-pop pop1.txt
@@ -36,8 +36,8 @@ Parameters as interpreted:
 Keeping individuals in 'keep' list
 After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Weir and Cockerham Fst estimates.
-Weir and Cockerham mean Fst estimate: -0.0056297
-Weir and Cockerham weighted Fst estimate: -0.0032926
+Weir and Cockerham mean Fst estimate: -0.014934
+Weir and Cockerham weighted Fst estimate: -0.013432
 After filtering, kept 100 out of a possible 100 Sites
 Run Time = 0.00 seconds
 
@@ -45,7 +45,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model13/replicate7/model13_replicate7.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model7/replicate7/model7_replicate7.vcf
 	--fst-window-size 100
 	--fst-window-step 100
 	--weir-fst-pop pop2.txt
@@ -57,7 +57,7 @@ Parameters as interpreted:
 Keeping individuals in 'keep' list
 After filtering, kept 20 out of 30 Individuals
 Outputting Windowed Weir and Cockerham Fst estimates.
-Weir and Cockerham mean Fst estimate: 0.0078185
-Weir and Cockerham weighted Fst estimate: 0.01117
+Weir and Cockerham mean Fst estimate: -0.0083871
+Weir and Cockerham weighted Fst estimate: -0.0063229
 After filtering, kept 100 out of a possible 100 Sites
 Run Time = 0.00 seconds

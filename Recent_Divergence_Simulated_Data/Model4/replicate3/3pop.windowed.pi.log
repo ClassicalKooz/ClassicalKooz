@@ -3,7 +3,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model10/replicate3/model10_replicate3.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model4/replicate3/model4_replicate3.vcf
 	--window-pi 100
 	--window-pi-step 100
 	--stdout
@@ -38,7 +38,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model10/replicate3/model10_replicate3.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model4/replicate3/model4_replicate3.vcf
 	--window-pi 100
 	--window-pi-step 100
 	--stdout
@@ -73,7 +73,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model10/replicate3/model10_replicate3.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model4/replicate3/model4_replicate3.vcf
 	--window-pi 100
 	--window-pi-step 100
 	--stdout

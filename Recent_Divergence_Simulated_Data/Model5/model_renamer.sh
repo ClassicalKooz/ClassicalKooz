@@ -10,8 +10,8 @@ for i in $(seq 1 10); do
 
   #Loop through all matching files
   for file in $files; do
-    #Rename the file from model13 to model5
-    mv "$file" "${file/model13/model5}"
+    #Rename the file from model4 to model2
+    mv "$file" "${file/model7/model3}"
   done
 
   #Change back to the parent directory

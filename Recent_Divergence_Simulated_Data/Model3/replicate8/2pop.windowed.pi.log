@@ -3,7 +3,7 @@ VCFtools - 0.1.17
 (C) Adam Auton and Anthony Marcketta 2009
 
 Parameters as interpreted:
-	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model7/replicate8/model7_replicate8.vcf
+	--vcf /home/faculty/asethuraman/Documents/MichaelK/Models/Model13/replicate8/model13_replicate8.vcf
 	--window-pi 100
 	--window-pi-step 100
 	--stdout
