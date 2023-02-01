@@ -10,3 +10,5 @@ Arun Sethuraman, Melissa Lynch
 doi: https://doi.org/10.1101/733600
 In this new data, models A-E are instead 1-5 with an added Model6 as control with an ancient divergence time of 2,000,000 years and a more "recent" second divergence at 500,000 years 
 Recent_Divergence_Simulated_Data follows the same pattern above, but with an ancient divergence time of 18500 years and a recent divergence of 1850 years. 
+
+The files in each model consist of 10 replicates over 20 loci, collecting information from 10 individuals in each population (population 1, population 2, ghost)
