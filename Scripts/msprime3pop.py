@@ -41,8 +41,8 @@ Diversity4=[]
 Diversity2=[]
 TajimaD=[]
 #write a for loop over the next three commands (1) simulate tree, (2) simulate mutations, (3) write a vcf
-for k in range(0,10): # looping over 10 replicates
-    for j in range(0,20): # looping over number of independent loci (20)
+for k in range(1,11): # looping over 10 replicates
+    for j in range(1,21): # looping over number of independent loci (20)
         x=random.randint(1,9999)
         #Call msprime to simulate tree sequence under the demographic model
         ts = msprime.sim_ancestry(sequence_length=1000, samples={"pop1": 10, "pop2": 10, "Ghost":10}, demography=demography, random_seed=x)
@@ -53,15 +53,15 @@ for k in range(0,10): # looping over 10 replicates
         #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
         with open("model1_replicate%r_%r.vcf" %(k,j), "w") as vcf_file:
             ts.write_vcf(vcf_file,contig_id=str(j))
-            '''ts.write_fasta("model5_replicate%r_%r.fasta" %(k,j))
-            imfile = open("model5_replicate%r_%r.u" %(k,j),"w",buffering=1)
+            ts.write_fasta("model1_replicate%r_%r.fasta" %(k,j))
+            imfile = open("model1_replicate%r_%r.u" %(k,j),"w",buffering=1)
             for i,h in enumerate(ts.haplotypes()):
-                print(f"Sample{i} {h}",file=imfile)'''
+                print(f"Sample{i} {h}",file=imfile)
         #calculate all stats
         
-        Fst34.append(ts.Fst(sample_sets=[ts.samples(population=3), ts.samples(population=4)],mode="site"))
-        Fst32.append(ts.Fst(sample_sets=[ts.samples(population=3), ts.samples(population=2)],mode="site"))
-        Fst42.append(ts.Fst(sample_sets=[ts.samples(population=4), ts.samples(population=2)],mode="site"))
+        #Fst34.append(ts.Fst(sample_sets=[ts.samples(population=3), ts.samples(population=4)],mode="site"))
+        #Fst32.append(ts.Fst(sample_sets=[ts.samples(population=3), ts.samples(population=2)],mode="site"))
+        #Fst42.append(ts.Fst(sample_sets=[ts.samples(population=4), ts.samples(population=2)],mode="site"))
         '''
         Divergence34.append(ts.divergence(sample_sets=[ts.samples(population=3), ts.samples(population=4)],mode="site"))
         Divergence32.append(ts.divergence(sample_sets=[ts.samples(population=3), ts.samples(population=2)],mode="site"))
@@ -75,9 +75,9 @@ for k in range(0,10): # looping over 10 replicates
         '''
         
         
-d={"Fst34":Fst34,"Fst32":Fst32,"Fst42":Fst42}
-df=pd.DataFrame(data=d)
-df.to_csv('Model1_Fst.csv',index=False)
+#d={"Fst34":Fst34,"Fst32":Fst32,"Fst42":Fst42}
+#df=pd.DataFrame(data=d)
+#df.to_csv('Model1_Fst.csv',index=False)
 '''d={"Divergence34":Divergence34,"Divergence32":Divergence32,"Divergence42":Divergence42}
 df=pd.DataFrame(data=d)
 df.to_csv('Model5_Divergence.csv',index=False)
