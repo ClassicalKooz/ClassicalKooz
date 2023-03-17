@@ -20,9 +20,9 @@ demography.add_population_split(time=1850, derived=["pop1", "pop2"], ancestral="
 demography.set_migration_rate(source="pop1", dest="pop2", rate=0.010)
 demography.set_migration_rate(source="pop2", dest="pop1", rate=0.010)
 demography.set_migration_rate(source="pop1", dest="Ghost", rate=0.000)
-demography.set_migration_rate(source="Ghost", dest="pop1", rate=0.000)
+demography.set_migration_rate(source="Ghost", dest="pop1", rate=0.050)
 demography.set_migration_rate(source="pop2", dest="Ghost", rate=0.000)
-demography.set_migration_rate(source="Ghost", dest="pop2", rate=0.000)
+demography.set_migration_rate(source="Ghost", dest="pop2", rate=0.050)
 demography.sort_events()
 
 #TODO for MK: We need to write several loops. 1) We have to loop over migration rates (0 - no gene flow, 0.1 - low gene flow, 0.5 - high gene flow)
@@ -51,10 +51,10 @@ for k in range(1,11): # looping over 10 replicates
         ts = msprime.sim_mutations(ts, rate=0.00000001, random_seed=x)#, model='binary')
 
         #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
-        with open("model1_replicate%r_%r.vcf" %(k,j), "w") as vcf_file:
-            ts.write_vcf(vcf_file,contig_id=str(j))
-            ts.write_fasta("model1_replicate%r_%r.fasta" %(k,j))
-            imfile = open("model1_replicate%r_%r.u" %(k,j),"w",buffering=1)
+        with open("model2_replicate%r_%r.vcf" %(k,j), "w") as vcf_file:
+            #ts.write_vcf(vcf_file,contig_id=str(j))
+            ts.write_fasta("model5_replicate%r_%r.fasta" %(k,j))
+            imfile = open("model5_replicate%r_%r.u" %(k,j),"w",buffering=1)
             for i,h in enumerate(ts.haplotypes()):
                 print(f"Sample{i} {h}",file=imfile)
         #calculate all stats
