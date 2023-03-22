@@ -51,8 +51,8 @@ for k in range(1,11): # looping over 10 replicates
         ts = msprime.sim_mutations(ts, rate=0.00000001, random_seed=x)#, model='binary')
 
         #Write a vcf file containing all the mutations simulated under the model above - example.vcf should now contain the variants
-        with open("model2_replicate%r_%r.vcf" %(k,j), "w") as vcf_file:
-            #ts.write_vcf(vcf_file,contig_id=str(j))
+        with open("model5_replicate%r_%r.vcf" %(k,j), "w") as vcf_file:
+            ts.write_vcf(vcf_file,contig_id=str(j))
             ts.write_fasta("model5_replicate%r_%r.fasta" %(k,j))
             imfile = open("model5_replicate%r_%r.u" %(k,j),"w",buffering=1)
             for i,h in enumerate(ts.haplotypes()):
